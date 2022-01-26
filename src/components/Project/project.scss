@@ -1,0 +1,131 @@
+.project-container {
+  width: 343px;
+  // background-color: blue;
+
+  margin: auto {
+    top: 30px;
+  };
+
+  .project-title-p {
+    width: 343px;
+    background-color: burlywood;
+  }
+
+  .project-content {
+    width: 100%;
+    height: 600px;
+    // background-image: url('../../assets/img/large.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .project-card {
+      width: 343px;
+      height: 540px;
+      margin-right: 100px;
+      // background-color: rgba(255, 255, 255, 0.651);
+      background-color: #30475E;
+
+      transition: all 0.8s ;
+
+      .project-img {
+        width: 280px;
+        height: 200px;
+        margin: auto {
+          top: 25px;
+        };
+        background-color: white;
+      }
+
+      .project-description {
+        width: 280px;
+        margin: auto;
+        text-align: center;
+        
+        .project-title {
+          margin: 20px 0;
+          color: white;
+        }
+
+        .project-hr{
+          display: block;
+          width: 70px;
+          border-color: black;
+          margin: auto;
+        }
+
+        ul {
+          color: white;
+          text-align: left;
+          width: max-content;
+          margin: 20px auto;
+        }
+      }
+
+      .project-route {
+        width: 280px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+
+        margin: auto {
+          top: 60px;
+        }
+      }
+      
+      .project-btn {
+        display: inline-block;
+        width: 120px;
+        height: 40px;
+        background-color: white;
+        text-align: center;
+        border: 1px solid black;
+    
+        a {
+          display: inline-block;
+          padding-top: calc(20px - 8.5px);
+          text-decoration: none;
+
+          &:visited {
+            color: black;
+          }
+
+          &:link {
+            color: black;
+          }
+        }
+        
+        &:hover {
+          background-color: black;
+          border-radius: 10px;
+          transition: all .8s ;
+
+          a {
+            color: white;
+          }
+        }
+      }
+
+      &:hover {
+        border-radius: 20px;
+        transform: translateY(-20px);
+        transition: all 0.8s ;
+
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px) {
+
+  .project-container {
+    width: 100%;
+    margin-top: 50px;
+
+    .project-title-p {
+      width: 95%;
+      margin: auto;
+    }
+  }
+}

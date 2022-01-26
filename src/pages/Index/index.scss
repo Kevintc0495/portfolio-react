@@ -1,0 +1,131 @@
+// .index-container {
+//   width: 343px;
+//   height: 200px;
+//   background-color: blue;
+//   margin: auto {
+//     top: 30px;
+//   };
+
+// .index-title {
+//   width: 343px;
+//   background-color: burlywood;
+// }
+
+// .index-content {
+//   width: 100%;
+//   // background-image: url('../../assets/img/large.jpg');
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   .index-card {
+//     width: 343px;
+//     height: 540px;
+//     margin-right: 100px;
+//     // background-color: rgba(255, 255, 255, 0.651);
+//     background-color: #30475E;
+
+//     transition: all 0.8s ;
+
+//     .index-img {
+//       width: 280px;
+//       height: 200px;
+//       margin: auto {
+//         top: 25px;
+//       };
+//       background-color: white;
+//     }
+
+//     .index-description {
+//       width: 280px;
+//       margin: auto;
+//       text-align: center;
+      
+//       .index-title {
+//         margin: 20px 0;
+//         color: white;
+//       }
+
+//       .index-hr{
+//         display: block;
+//         width: 70px;
+//         border-color: black;
+//         margin: auto;
+//       }
+
+//       ul {
+//         color: white;
+//         text-align: left;
+//         width: max-content;
+//         margin: 20px auto;
+//       }
+//     }
+
+//     .index-route {
+//       width: 280px;
+//       text-align: center;
+//       display: flex;
+//       justify-content: space-between;
+
+//       margin: auto {
+//         top: 60px;
+//       }
+//     }
+    
+//     .index-btn {
+//       display: inline-block;
+//       width: 120px;
+//       height: 40px;
+//       background-color: white;
+//       text-align: center;
+//       border: 1px solid black;
+  
+//       a {
+//         display: inline-block;
+//         padding-top: calc(20px - 8.5px);
+//         text-decoration: none;
+
+//         &:visited {
+//           color: black;
+//         }
+
+//         &:link {
+//           color: black;
+//         }
+//       }
+      
+//       &:hover {
+//         background-color: black;
+//         border-radius: 10px;
+//         transition: all .8s ;
+
+//         a {
+//           color: white;
+//         }
+//       }
+//     }
+
+//     &:hover {
+//       border-radius: 20px;
+//       transform: translateY(-20px);
+//       transition: all 0.8s ;
+
+//     }
+//   }
+
+// }
+// }
+
+
+// @media (min-width: 768px) {
+
+// .index-container {
+//   width: 100%;
+//   margin-top: 50px;
+
+//   .index-title {
+//     width: 95%;
+//     margin: auto;
+//   }
+// }
+// }
