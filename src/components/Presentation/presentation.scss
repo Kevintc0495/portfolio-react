@@ -12,13 +12,13 @@
     }
 
     .home-picture {
-      width: 150px;
-      height: 150px;
+      width: 230px;
+      height: 230px;
       border-radius: 50%;
       margin: auto;
       position: absolute;
-      left: calc(50% - 75px);
-      bottom: calc(0% - 75px);
+      left: calc(50% - 115px);
+      bottom: calc(0% - 115px);
 
       img {
         width: 100%;
@@ -32,7 +32,7 @@
   .home-profile {
     width: 100%;
     text-align: center;
-    padding-top: 80px;
+    margin-top: 140px;
 
     h3 {
       font-size: 18px;
@@ -49,6 +49,25 @@
       border: 1px solid black;
       padding: 10px;
       border-radius: 10px;
+    }
+
+    .home-cv {
+      margin-top: 20px;
+
+      button {
+        width: 150px;
+        height: 40px;
+        background-color: rgb(78, 161, 78);
+        color: white;
+        transition: all 1s;
+
+        &:hover {
+          background-color: white;
+          color: rgb(78, 161, 78);
+          border: 1px solid rgb(78, 161, 78);
+          border-radius: 15px;
+        }
+      }
     }
   }
 }
@@ -90,6 +109,8 @@
       position: absolute;
       right: calc(50% - 250px);
       top: 300px;
+      margin-top: 0;
+
 
       h3 {
         font-size: 20px;  
