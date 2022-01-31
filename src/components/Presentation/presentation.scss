@@ -35,7 +35,11 @@
     margin-top: 140px;
 
     h3 {
-      font-size: 18px;
+      font-size: 24px;
+      font-style: italic;
+      font-family: Times;
+      color: #30475E;
+      font-weight: bold;
     }
 
     p {
@@ -52,21 +56,19 @@
     }
 
     .home-cv {
-      margin-top: 20px;
+      width: 343px;
+      text-align: left;
+
+      margin: auto {
+        top: 20px;
+      };
 
       button {
         width: 150px;
         height: 40px;
-        background-color: rgb(78, 161, 78);
+        background-color: #30475E;
         color: white;
-        transition: all 1s;
-
-        &:hover {
-          background-color: white;
-          color: rgb(78, 161, 78);
-          border: 1px solid rgb(78, 161, 78);
-          border-radius: 15px;
-        }
+        border-radius: 15px;
       }
     }
   }
@@ -99,7 +101,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: rgba(0,0,0,0.6);
+      background-color: rgba(0, 0, 0, 0.808);
     }
 
     .home-profile {
@@ -113,8 +115,7 @@
 
 
       h3 {
-        font-size: 20px;  
-        color: white;
+        font-size: 30px;  
       }
 
       p {
@@ -130,10 +131,32 @@
         border: 0;
         padding: 10px;
       }
+
+      .home-cv {
+        width: 480px;
+        text-align: center;
+        
+        margin: auto {
+          top: 20px;
+        };
+
+        button {
+          width: 150px;
+          height: 40px;
+          background-color: #30475E;
+          color: white;
+          transition: all 1s;
+  
+          &:hover {
+            background-color: white;
+            color: #30475E;
+            border: 1px solid #30475E;
+            border-radius: 15px;
+          }
+        }
+      }
     }
-
   }
-
 }
 
 @media (min-width: 1200px) {
@@ -148,25 +171,25 @@
       }
 
       .home-picture {
-        width: 210px;
-        height: 210px;
+        width: 250px;
+        height: 250px;
         position: absolute;
-        left: 25%;
-        bottom: calc(50% - 105px);
+        left: calc(50% - 400px);
+        bottom: calc(50% - 125px);
       }
     }
 
     .home-profile {
-      width: 600x;
-      height: 208px;
+      width: 600px;
+      height: 260px;
       padding-top: 0;
       position: absolute;
-      right: 15%;
-      top: calc(50% - 104px);
+      top: calc(50% - 130px);
+      left: calc(50% - 150px);
+
 
       h3 {
-        font-size: 24px;  
-        color: white;
+        width: 580px;
       }
 
       p {
@@ -182,9 +205,16 @@
         border: 0;
         padding: 10px;
       }
+
+      .home-cv {
+        width: 580px;
+        
+        margin: auto {
+          top: 20px;
+        };
+      }
     }
   }
-
 }
 
 @media (min-width: 1440px) {
@@ -194,15 +224,15 @@
     .home-image {
 
       .home-picture {
-        left: 30%;
-        bottom: calc(50% - 105px);
+        width: 300px;
+        height: 300px;
+        bottom: calc(50% - 150px);
+        left: calc(50% - 420px);
       }
     }
-
+    
     .home-profile {
-      right: 20%;
+      left: calc(50% - 100px);
     }
-
   }
-  
 }

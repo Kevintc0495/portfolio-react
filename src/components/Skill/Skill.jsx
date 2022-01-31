@@ -15,7 +15,7 @@ import vuejs from '../../assets/img/skills/vuejs.png';
 const Skill = () => {
   return (
     <>
-      <section className="skill-container">
+      <section className="skill-container" id='skill'>
         <div className='skill-title'>
           <h2>Skills</h2>
         </div>

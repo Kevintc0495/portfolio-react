@@ -9,7 +9,7 @@ import instagram from '../../assets/img/instagram.png'
 const Contact = () => {
   return (
     <>
-      <section className="contact-container">
+      <section className="contact-container" id="contact">
         <div className='contact-title'>
           <h2>Contact</h2>
           <p>Contácteme si quieres que trabajemos juntos.</p>
