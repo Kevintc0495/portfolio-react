@@ -1,0 +1,33 @@
+.table-container {
+  
+  .table-title {
+    width: 80%;
+    height: 50px;
+    background-color: gray;
+    margin: auto {
+      top: 30px;
+    };
+    
+    h2 {
+      padding: {
+        top: calc(25px - 14px);
+        left: 10px;
+      }
+    }
+  }
+
+  .table {
+    width: 70%;
+    margin: auto {
+      top: 20px;
+    };
+    background-color: chocolate;
+
+    span {
+      display: block;
+      padding: {
+        top: calc(15px - 9.5px);
+      }
+    }
+  }
+}

@@ -3,9 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import './App.css'
 import Index from './pages/Index/Index';
 import Game from './pages/Game/Game';
-import Project from './components/Project/Project';
-// import Project from './pages/Project/Project';
-// import Game from './pages/Game/Game';
+import Budget from './pages/Budget/Budget';
 import './sass/app.scss'
 
 function App() {
@@ -15,7 +13,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Index/>}/>
-          <Route path="/game" element={<Game/>}/>
+          <Route path="/budget" element={<Budget/>}/>
         </Routes>
       </Router>
     </div>

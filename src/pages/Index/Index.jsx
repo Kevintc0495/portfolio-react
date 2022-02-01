@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './index.scss'
-import imagen from '../../assets/img/large.jpg'
 import Navbar from '../../components/NavBar/Navbar';
 import Presentation from '../../components/Presentation/Presentation';
 import Project from '../../components/Project/Project';

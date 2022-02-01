@@ -7,6 +7,10 @@ import instagram from '../../assets/img/instagram.png'
 
 
 const Contact = () => {
+
+  const imprimir = () => {
+    window.print()
+  }
   return (
     <>
       <section className="contact-container" id="contact">
@@ -36,6 +40,7 @@ const Contact = () => {
             </a>
           </div>
         </article>
+        <button onClick={imprimir}>imprimir</button>
       </section>
     </>
   );
