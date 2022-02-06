@@ -1,0 +1,40 @@
+.pay-form-container {
+  width: 343px;
+  margin-top: 80px;
+  // background-color: aqua;
+  
+  .pay-form-title {
+    width: 343px;
+    text-align: center;
+  }
+
+  .pay-form-item {
+    margin-top: 20px;
+    
+    input {
+      width: 100%;
+      padding: 10px 16px;
+      border-radius: 10px;
+    }
+  }
+
+  .pay-form-btn {
+    margin-top: 20px;
+    background-color: antiquewhite;
+
+    button {
+      width: 100%;
+      height: 39px;
+      border-radius: 10px;
+      background-color: #30475E;
+      color: white;
+      font-size: 18px;
+
+      &:active {
+        background-color: white;
+        color: #30475E;
+        border: 1px solid #30475E;
+      }
+    }
+  }
+}

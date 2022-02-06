@@ -1,18 +1,58 @@
 .title-container {
   
   .title {
+    position: relative;
     width: 80%;
     height: 50px;
     background-color: gray;
     margin: auto {
-      top: 30px;
+      top: 80px;
     };
     
     h2 {
-      padding: {
-        top: calc(25px - 14px);
-        left: 10px;
-      }
+      display: inline-block;
+      position: absolute;
+      top: calc(25px - 14px);
+      left: 15px;
+    }
+
+    .add-btn {
+      position: absolute;
+      top: calc(25px - 13px);
+      left: 90px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: calc(25px - 13px);
+      left: 120px;
+    }
+
+    .remove-btn {
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      font-weight: bold;
+      border: 0;
+      top: calc(25px - 13px);
+      right: 10px;
+      color: white;
+      background-color: rgb(204, 49, 49);
+    }
+  }
+
+  .title-input {
+    width: 70%;
+
+    margin: auto {
+      top: 20px;
+    };
+
+    input {
+      width: 100%;
+      padding: 10px 20px;
+      border-radius: 10px;
     }
   }
 
@@ -22,7 +62,6 @@
     margin: auto {
       top: 20px;
     };
-    background-color: chocolate;
 
     span {
       display: block;

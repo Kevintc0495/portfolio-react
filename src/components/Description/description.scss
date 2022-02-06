@@ -1,6 +1,7 @@
 .description-container {
   
   .description-title {
+    position: relative;
     width: 80%;
     height: 50px;
     background-color: gray;
@@ -14,6 +15,45 @@
         left: 10px;
       }
     }
+
+    .add-btn {
+      position: absolute;
+      top: calc(25px - 13px);
+      left: 150px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: calc(25px - 13px);
+      left: 180px;
+    }
+
+    .remove-btn {
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      font-weight: bold;
+      border: 0;
+      top: calc(25px - 13px);
+      right: 10px;
+      color: white;
+      background-color: rgb(204, 49, 49);
+    }
+  }
+
+  .description-input {
+    width: 70%;
+
+    margin: auto {
+      top: 20px;
+    };
+
+    textarea {
+      width: 100%;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
   }
 
   .description {
@@ -21,7 +61,6 @@
     margin: auto {
       top: 20px;
     };
-    background-color: chocolate;
 
     span {
       display: block;

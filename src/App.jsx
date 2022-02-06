@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import './App.css'
 import Index from './pages/Index/Index';
-import Game from './pages/Game/Game';
 import Budget from './pages/Budget/Budget';
+import PayCalculate from './pages/PayCalculate/PayCalculate';
 import './sass/app.scss'
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Index/>}/>
           <Route path="/budget" element={<Budget/>}/>
+          <Route path="/pay" element={<PayCalculate/>}/>
         </Routes>
       </Router>
     </div>

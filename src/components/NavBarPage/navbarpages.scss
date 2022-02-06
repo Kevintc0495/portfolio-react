@@ -1,0 +1,54 @@
+.navbarpages-container {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  background-color: #30475E;
+
+  .navbarpages-btn {
+    text-align: end;
+    height: 50px;
+  }
+
+  .navbarpages-panel {
+    margin-top: 1px;
+    width: 160px;
+    height: 200px;
+    position: fixed;
+    right: 0;
+    background-color: #30475E;
+    transition: transform .5s ease;
+    // /* De arriba */
+    transform: translate(100%, 0);
+
+    .panel-item {
+      width: 130px;
+      height: 35px;
+      color: white;
+      position: relative;
+      // background-color: blueviolet;
+      border-bottom: 1px solid white;
+
+      margin: auto {
+        top: 10px
+      };
+      
+      span {
+        position: absolute;
+        top: calc(17.5px - 8.5px);
+        // background-color: burlywood;
+        font-size: 18px;
+      }
+
+      button {
+        position: absolute;
+        top: calc(17.5px - 13px);
+        right: 2px;
+      }
+    }
+  }
+
+  .navbarpages-panel.is-active {
+    transform: translate(0, 0);
+  }
+}

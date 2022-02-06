@@ -1,0 +1,41 @@
+.pay-table-container {
+  width: 343px;
+  margin-top: 50px;
+  // background-color: bisque;
+
+  .pay-table-period {
+    padding-left: 10px;
+
+    h3 {
+      display: inline-block;
+    }
+    
+    h3:last-child {
+      margin-left: 120px;
+    }
+  }
+
+  .pay-table {
+    width: 343px;
+    margin-top: 20px;
+
+    thead {
+      background-color: #30475E;
+      color: white;
+      
+      th {
+        width: 150px;
+        height: 35px;
+      }
+    }
+    
+    tbody {
+      text-align: center;
+      // padding-top: 10px;
+      td {
+        width: 150px;
+        padding-top: 10px;
+      }
+    }
+  }
+}
