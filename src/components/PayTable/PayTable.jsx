@@ -12,7 +12,8 @@ const PayTable = () => {
 
   return (
     <>
-      { table && <section className="pay-table-container" >
+      { table && 
+        <section className="pay-table-container" >
           <div className='pay-table-period'>
             <h3>{ table.period }</h3>
             <h3>{ table.ruc }</h3>
