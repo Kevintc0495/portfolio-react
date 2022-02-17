@@ -13,15 +13,14 @@ const PokemonItems = () => {
   
   const pokemonApi = async (url) => {
     let pokemon = {};
-    const res = await fetch(url);
-    const json = await res.json();
+    let res = await fetch(url);
+    let json = await res.json();
 
     if (nameId) {
       let types = [];
 
       pokemon = {
         id: json.id,
-        // img: json.sprites.other.dream_world.front_default,
         img: json.sprites.other.home.front_default,
         name: json.name,
       }
@@ -38,15 +37,15 @@ const PokemonItems = () => {
       setPokemons( pokemons => ([...pokemons, pokemon]));
 
     }else {
-      json.results.map( async (el) => {
-        let { url } = el;
+      for (let i = 0; i < json.results.length; i++) {
+        const el = json.results[i];
         let types = [];
-        const res = await fetch(url);
-        const data = await res.json();
+        let { url } = el;
+        let res = await fetch(url);
+        let data = await res.json();
 
         pokemon = {
           id: data.id,
-          // img: data.sprites.other.dream_world.front_default,
           img: data.sprites.other.home.front_default,
           name: data.name,
         }
@@ -59,9 +58,11 @@ const PokemonItems = () => {
             type: types,
           }
         })
+        console.log(pokemon);
 
-        setPokemons( pokemons => ([...pokemons, pokemon]))
-      })
+        setPokemons( pokemons => ([...pokemons, pokemon]));
+        
+      }
     }
   }
 
@@ -82,9 +83,9 @@ const PokemonItems = () => {
         ( pokemons.map( el => 
         (<article className={`pokemonItems-card bg-${ el.type[0] }`} key={ el.id }>
             <div className="card-img">
-              <Link to={`${el.name}`}>
+              {/* <Link to={`${el.name}`}> */}
                 <img src={ el.img } alt={ el.name } />
-              </Link>
+              {/* </Link> */}
             </div>
             <span className='card-number'>#{ el.id }</span>
             <h3 className='card-name'>{ el.name }</h3>

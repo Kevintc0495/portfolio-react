@@ -25,7 +25,6 @@ const PokemonSearch = () => {
             <select name="order" id="search-select" onChange={ searchselect }>
               <option value="">Ordenar por...</option>
               <option value="lowerNumber">Número inferior</option>
-              <option value="upNumber">Número superior</option>
             </select>
           </div>
         </article>
