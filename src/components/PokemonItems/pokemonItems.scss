@@ -15,6 +15,8 @@ $rock-color: #fcf7e0;
 $steel-color: #d2feff;
 $ghost-color: #dae1fa;
 $dragon-color: #d3f1f8;
+$dark-color: #a9a99f;
+
 
 
 $type-fire-color: #fd7d24;
@@ -34,11 +36,13 @@ $type-rock-color: #a38c21;
 $type-steel-color: #9eb7b8;
 $type-ghost-color: #7b62a3;
 $type-dragon-color: #85b9d4;
+$type-dark-color: #71716c;
 
 
 
 .pokemonItems-container {
   width: 100%;
+  min-height: 100vh;
   background-color: #fbfcfc;
   // background-color: red;
   margin-top: 15px;
@@ -162,6 +166,9 @@ $type-dragon-color: #85b9d4;
         .dragon {
           background-color: $type-dragon-color;
         }
+        .dark {
+          background-color: $type-dark-color;
+        }
         
       }
     }
@@ -216,6 +223,9 @@ $type-dragon-color: #85b9d4;
     }
     .bg-dragon {
       background-color: $dragon-color;
+    }
+    .bg-dark {
+      background-color: $dark-color;
     }
   }
   

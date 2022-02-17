@@ -1,38 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import UrlContext from '../../context/UrlContext';
 import './pokemonItems.scss';
 
 const PokemonItems = () => {
   const [ pokemons, setPokemons ] = useState([]);
-  const [ offset, setOffset ] = useState(0);
-  
-  const next = () => { setOffset(offset + 20) };
-
-  const previous = () => { setOffset(offset - 20) };
+  const { nameId, url } = useContext( UrlContext );
 
 
-useEffect(() => {
-  const url = `https://pokeapi.co/api/v2/pokemon?limit=20&offset=${ offset }`;
-  setPokemons([])
+  useEffect(() => {
+  setPokemons([]);
   
   const pokemonApi = async (url) => {
-    console.log("Actualiza");
-    let pokemon = {}
+    let pokemon = {};
     const res = await fetch(url);
     const json = await res.json();
 
-    json.results.map( async (el) => {
-      let { url } = el;
+    if (nameId) {
       let types = [];
-      const res = await fetch(url);
-      const data = await res.json();
 
       pokemon = {
-        id: data.id,
-        img: data.sprites.other.dream_world.front_default,
-        name: data.name,
+        id: json.id,
+        // img: json.sprites.other.dream_world.front_default,
+        img: json.sprites.other.home.front_default,
+        name: json.name,
       }
-      
-      data.types.map(el => {
+
+      json.types.map(el => {
         types.push(el.type.name)
 
         pokemon = {
@@ -41,29 +35,56 @@ useEffect(() => {
         }
       })
 
-      setPokemons( pokemons => ([...pokemons, pokemon]))
-    })
+      setPokemons( pokemons => ([...pokemons, pokemon]));
+
+    }else {
+      json.results.map( async (el) => {
+        let { url } = el;
+        let types = [];
+        const res = await fetch(url);
+        const data = await res.json();
+
+        pokemon = {
+          id: data.id,
+          // img: data.sprites.other.dream_world.front_default,
+          img: data.sprites.other.home.front_default,
+          name: data.name,
+        }
+        
+        data.types.map(el => {
+          types.push(el.type.name)
+
+          pokemon = {
+            ...pokemon,
+            type: types,
+          }
+        })
+
+        setPokemons( pokemons => ([...pokemons, pokemon]))
+      })
+    }
   }
 
-  pokemonApi(url)
+  pokemonApi(url);
 
-}, [ offset ])
+}, [ url ]);
 
   return (
     <>
       <main className='pokemonItems-container'>
         <section className='pokemonItems-btns'>
-          <button onClick={ previous }>Previous</button>
-          <button onClick={ next }>Next</button>
+          {/* { offset > 1 &&  */}
         </section>
         <section className="pokemonItems-pokemons">
-        {pokemons === 0 ? (
+        {pokemons.length === 0 ? (
           <h3>Cargando</h3>
         ): 
         ( pokemons.map( el => 
         (<article className={`pokemonItems-card bg-${ el.type[0] }`} key={ el.id }>
             <div className="card-img">
-              <img src={ el.img } alt={ el.name } />
+              <Link to={`${el.name}`}>
+                <img src={ el.img } alt={ el.name } />
+              </Link>
             </div>
             <span className='card-number'>#{ el.id }</span>
             <h3 className='card-name'>{ el.name }</h3>
