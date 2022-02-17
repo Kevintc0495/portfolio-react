@@ -24,10 +24,10 @@ const UrlProvider = ({children}) => {
     const $arrows = document.querySelector('.ps-btn');
     setNameId('');
     if ( e.target.value === 'lowerNumber' ) {
+      setOffset(0);
+      setLimit(20);
       $arrows.style.display = "flex";
       setUrl('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0');
-    } else if (e.target.value === 'upNumber') {
-      setUrl('https://pokeapi.co/api/v2/pokemon?limit=20&offset=778');
     }
   };
 
