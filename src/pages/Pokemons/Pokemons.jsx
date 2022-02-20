@@ -1,7 +1,6 @@
 import React from 'react';
 import PokemonItems from '../../components/PokemonItems/PokemonItems';
 import PokemonSearch from '../../components/PokemonSearch/PokemonSearch';
-import { UrlProvider } from '../../context/UrlContext';
 import './pokemons.scss';
 
 const Pokemon = () => {
@@ -10,10 +9,8 @@ const Pokemon = () => {
       <header className='pokemon-header-container'>
         <h1>POKEDEX</h1>
       </header>
-      <UrlProvider>
-        <PokemonSearch/>
-        <PokemonItems/>
-      </UrlProvider>
+      <PokemonSearch/>
+      <PokemonItems/>
       <footer className='pokemon-footer-container'>
         <h4>Copyright</h4>
       </footer>

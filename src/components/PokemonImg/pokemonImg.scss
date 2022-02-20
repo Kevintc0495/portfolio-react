@@ -1,0 +1,94 @@
+@import '../../sass/colors.scss';
+
+
+.pokemonImg-container {
+  width: 100%;
+  
+  .pokemonImg-img {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    background-color: bisque;
+    border-radius: 0 0 15px 15px;
+    margin: auto;
+
+    img {
+      width: 280px;
+      display: block;
+      margin: auto;
+      // background-color: red;
+    }
+
+    button {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      border-radius: 50%;
+      background-color: black;
+      border: 1px solid;
+      top: 5%;
+      left: 5%;
+
+      code {
+        font-size: 20px;
+        color: white;
+      }
+    }
+  }
+
+  .bg-fire {
+    background-color: $fire-color;
+  }
+  .bg-ice {
+    background-color: $ice-color;
+  }
+  .bg-flying {
+    background-color: $flying-color;
+  }
+  .bg-psychic {
+    background-color: $psychic-color;
+  }
+  .bg-grass {
+    background-color: $grass-color;
+  }
+  .bg-poison {
+    background-color: $poison-color;
+  }
+  .bg-normal {
+    background-color: $normal-color;
+  }
+  .bg-electric {
+    background-color: $electric-color;
+  }
+  .bg-fairy {
+    background-color: $fairy-color;
+  }
+  .bg-bug {
+    background-color: $bug-color;
+  }
+  .bg-ground {
+    background-color: $ground-color;
+  }
+  .bg-water {
+    background-color: $water-color;
+  }
+  .bg-fighting {
+    background-color: $fighting-color;
+  }
+  .bg-rock {
+    background-color: $rock-color;
+  }
+  .bg-steel {
+    background-color: $steel-color;
+  }
+  .bg-ghost {
+    background-color: $ghost-color;
+  }
+  .bg-dragon {
+    background-color: $dragon-color;
+  }
+  .bg-dark {
+    background-color: $dark-color;
+  }
+  
+}

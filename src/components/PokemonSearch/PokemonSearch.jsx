@@ -1,27 +1,24 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import './pokemonSearch.scss';
 import UrlContext from '../../context/UrlContext';
 
 const PokemonSearch = () => {
+  const [ showInput, setShowInput ] = useState(false);
   const { searchNameId, searchselect, offset, limit, next, previous } = useContext(UrlContext);
 
   const selectSearch = () => {
-    const $name = document.querySelector('.ps-name');
-    const $select = document.querySelector('.ps-select');
-
-    $name.classList.toggle('hidden');
-    $select.classList.toggle('visibility');
+    setShowInput(!showInput);
   }
 
   return (
     <>
       <section  className='ps-container'>
         <article className='ps-input'>
-          <div className='ps-name'>
+          <div className={`ps-name ${showInput ? 'hidden' : ''}`}>
             <input type="text" placeholder='Busqueda por nombre o número'/>
             <i onClick={ searchNameId } className="gg-search"></i>
           </div>
-          <div className='ps-select'>
+          <div className={`ps-select ${showInput ? 'visibility' : ''}`}>
             <select name="order" id="search-select" onChange={ searchselect }>
               <option value="">Ordenar por...</option>
               <option value="lowerNumber">Número inferior</option>

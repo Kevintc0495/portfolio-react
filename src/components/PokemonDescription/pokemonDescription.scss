@@ -1,0 +1,85 @@
+.pokemonDescription-container {
+  width: 100%;
+  margin-top: 20px;
+
+  .pokemonDescription-title {
+    width: 343px;
+    height: 36.2px;
+    margin: auto;
+    position: relative;
+    // background-color: aqua;
+
+    .pokemonDescription-name {
+      display: inline-block;
+      margin-top: calc(18.2px - 12.4px);
+      
+      h3 {
+        font-weight: 500;
+      }
+    }
+
+    .pokemonDescription-types {
+      width: 160px;
+      max-width: 220px;
+      display: inline-block;
+      position: absolute;
+      margin-top: calc(18.2px - 15px);
+      right: 0;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+
+        .pokemonDescription-type {
+          width: max-content;
+          height: 30px;
+          padding-left: 10px;
+          padding-right: 10px;
+          display: inline-block;
+          text-align: center;
+          border-radius: 18px;
+        }
+      }
+    }
+
+  }
+
+  .pokemonDescription {
+    width: 343px;
+    margin: auto {
+      top: 15px;
+    }
+  }
+
+  .pokemonDescription-weaknesses {
+    width: 343px;
+    margin: auto {
+      top: 25px;
+    }
+
+    h4 {
+      font-weight: 500;
+    }
+
+    div {
+      display: flex;
+      margin-top: 10px;
+      justify-content: space-between;
+      
+      .pokemonDescription-weakness {
+        width: max-content;
+        height: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 18px;
+
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+
+  }
+}

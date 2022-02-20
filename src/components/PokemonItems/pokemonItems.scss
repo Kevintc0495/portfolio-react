@@ -8,11 +8,6 @@
   // background-color: red;
   margin-top: 15px;
 
-  .pokemonItems-btns {
-    width: 343px;
-    margin: auto;
-  }
-
   .pokemonItems-pokemons {
     width: 343px;
     margin: auto ;
@@ -71,9 +66,15 @@
           display: inline-block;
           width: 68px;
           height: 30px;
-          padding-top: calc(15px - 9.5px);
+          // padding-top: calc(15px - 9.5px);
           border-radius: 10px;
           text-align: center;
+
+          // .card-type-name {
+          //   display: inline-block;
+          //   width: max-content;
+          //   font-size: 16px;
+          // }
         }
       }
     }
@@ -152,6 +153,4 @@
       };
     }
   }
-
-
 }
