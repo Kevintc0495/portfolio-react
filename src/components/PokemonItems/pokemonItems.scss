@@ -5,7 +5,6 @@
   width: 100%;
   min-height: 100vh;
   background-color: #fbfcfc;
-  // background-color: red;
   margin-top: 15px;
 
   .pokemonItems-pokemons {
@@ -14,7 +13,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    // background-color: aquamarine;
 
     .pokemonItems-card {
       width: 166px;
@@ -29,7 +27,6 @@
         height: 70px;
         margin: auto;
         position: relative;
-        // background-color: antiquewhite;
 
         img {
           width: 130px;
@@ -56,7 +53,6 @@
         width: 146px;
         display: flex;
         justify-content: space-between;
-        // background-color: aqua;
 
         margin: auto {
           top: 8px;
@@ -66,15 +62,10 @@
           display: inline-block;
           width: 68px;
           height: 30px;
-          // padding-top: calc(15px - 9.5px);
           border-radius: 10px;
-          text-align: center;
-
-          // .card-type-name {
-          //   display: inline-block;
-          //   width: max-content;
-          //   font-size: 16px;
-          // }
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
     }

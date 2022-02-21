@@ -35,6 +35,15 @@ const { pokemon } = useContext( PokemonContext );
               </div>))}
             </div>
           </article>
+          <article className="pokemonDescription-abilities">
+            <h4>Abilities</h4>
+            <div>
+              { el.ability.map( (ability, index) => 
+              (<div className={`pokemonDescription-ability`}  key={index} >
+                <span>{ ability }</span>
+              </div>))}
+            </div>
+          </article>
         </section>
         )}
       </section>

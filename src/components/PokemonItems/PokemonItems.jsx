@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, memo } from 'react';
 import { Link } from 'react-router-dom';
 import UrlContext from '../../context/UrlContext';
 import './pokemonItems.scss';
@@ -193,4 +193,4 @@ const PokemonItems = () => {
   )
 }
 
-export default PokemonItems
+export default memo(PokemonItems)
