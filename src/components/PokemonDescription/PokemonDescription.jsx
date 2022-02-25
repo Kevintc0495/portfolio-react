@@ -26,6 +26,15 @@ const { pokemon } = useContext( PokemonContext );
           <article className="pokemonDescription">
             <p>{el.text}</p>
           </article>
+          <article className="pokemonDescription-strengths">
+            <h4>Strengths</h4>
+            <div>
+              { el.strengths.map( (strengths, index) => 
+              (<div className={`pokemonDescription-strength  ${ strengths }`}  key={index} >
+                <span>{ strengths }</span>
+              </div>))}
+            </div>
+          </article>
           <article className="pokemonDescription-weaknesses">
             <h4>Weakness</h4>
             <div>
@@ -35,7 +44,7 @@ const { pokemon } = useContext( PokemonContext );
               </div>))}
             </div>
           </article>
-          <article className="pokemonDescription-abilities">
+          {/* <article className="pokemonDescription-strengths">
             <h4>Abilities</h4>
             <div>
               { el.ability.map( (ability, index) => 
@@ -43,7 +52,7 @@ const { pokemon } = useContext( PokemonContext );
                 <span>{ ability }</span>
               </div>))}
             </div>
-          </article>
+          </article> */}
         </section>
         )}
       </section>

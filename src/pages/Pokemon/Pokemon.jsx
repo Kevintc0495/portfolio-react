@@ -9,8 +9,10 @@ const Pokemon = () => {
   return (
     <>
       <PokemonProvider>
-        <PokemonImg/>
-        <PokemonDescription/>
+        <section className='pokemon-container'>
+          <PokemonImg/>
+          <PokemonDescription/>
+        </section>
       </PokemonProvider>
     </>
   )

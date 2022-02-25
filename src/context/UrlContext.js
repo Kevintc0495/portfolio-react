@@ -1,52 +1,49 @@
-import { createContext, useState } from "react";
+import { createContext, useRef, useState } from "react";
 
 const UrlContext = createContext();
 
-const initialUrl = "https://pokeapi.co/api/v2/pokemon?limit=20&offset=0";
+const initialUrl = "https://pokeapi.co/api/v2/pokemon?limit=24&offset=0";
 
 const UrlProvider = ({ children }) => {
+  const selectRef = useRef();
   const [ nameId, setNameId ] = useState('');
   const [ offset, setOffset ] = useState(0);
-  const [ limit, setLimit ] = useState(20);
+  const [ limit, setLimit ] = useState(24);
   const [ url, setUrl ] = useState( initialUrl );
   const [ pokemons, setPokemons ] = useState([]);
-
+  const [arrow, setArrow] = useState(true);
+  const [loader, setLoader] = useState(false);
 
   const searchNameId = (e) => {
     setNameId(e.target.previousSibling.value.toLowerCase());
     setUrl(`https://pokeapi.co/api/v2/pokemon/${e.target.previousSibling.value.toLowerCase()}`);
-
-    const $select = document.getElementById('search-select');
-    const $arrows = document.querySelector('.ps-btn');
-    $arrows.style.display = "none";
-    $select.value = '';
+    selectRef.current.value = '';
     e.target.previousSibling.value = '';
   };
 
   const searchselect = (e) => {
-    const $arrows = document.querySelector('.ps-btn');
     setNameId('');
     if ( e.target.value === 'lowerNumber' ) {
       setOffset(0);
-      setLimit(20);
-      $arrows.style.display = "flex";
-      setUrl('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0');
+      setLimit(24);
+      setArrow(true);
+      setUrl('https://pokeapi.co/api/v2/pokemon?limit=24&offset=0');
     }
   };
 
   const next = () => { 
     let x = offset;
-    setUrl(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${ x + 20 }`);
-    setOffset( offset + 20 );
-    setLimit( limit + 20 );
+    setUrl(`https://pokeapi.co/api/v2/pokemon?limit=24&offset=${ x + 24 }`);
+    setOffset( offset + 24 );
+    setLimit( limit + 24 );
   };
 
   const previous = (e) => { 
     if (offset !== 0) {
       let x = offset;
-      setUrl(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${ x - 20 }`);
-      setOffset( offset - 20 );
-      setLimit( limit - 20 );
+      setUrl(`https://pokeapi.co/api/v2/pokemon?limit=24&offset=${ x - 24 }`);
+      setOffset( offset - 24 );
+      setLimit( limit - 24 );
     }
   };
   
@@ -61,6 +58,11 @@ const UrlProvider = ({ children }) => {
     limit,
     pokemons, 
     setPokemons,
+    selectRef,
+    arrow,
+    setArrow,
+    loader,
+    setLoader
    };
   
   return <UrlContext.Provider value={ data }>{children}</UrlContext.Provider>

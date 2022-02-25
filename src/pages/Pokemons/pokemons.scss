@@ -26,3 +26,14 @@
     padding-top: calc(20px - 9.5px);
   }
 }
+
+@media (min-width: 1200px) {
+
+  .pokemon-header-container {
+
+    h1 {
+      font-size: 45px;
+      padding-top: calc(50px - 30px);
+    }
+  }
+}
